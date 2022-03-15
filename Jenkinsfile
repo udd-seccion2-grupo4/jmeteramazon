@@ -4,7 +4,7 @@ pipeline {
         stage('Clean') {
             steps {
                 script {
-                        bat  "./mvnw.cmd clean"           
+                        bat  "./mvnw clean"           
                 }
             }
         }
@@ -12,7 +12,7 @@ pipeline {
         stage('Compile') {
             steps {
                 script {
-                        bat  "./mvnw.cmd compile -e"           
+                        bat  "./mvnw compile -e"           
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                  script {
-                    bat  "./mvnw.cmd verify -Pperformance"           
+                    bat  "./mvnw verify -Pperformance"           
                 }
             }
         }
